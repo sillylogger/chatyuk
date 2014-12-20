@@ -1,0 +1,30 @@
+{
+  "name": "yukchat",
+  "version": "0.0.1",
+  "description": "A fun embedable chat room for fun and profit",
+  "main": "index.js",
+  "dependencies": {
+    "browserify": "^7.0.3",
+    "jest-cli": "^0.2.1",
+    "uglifyify": "^2.6.0",
+    "reactify": "^0.17.1"
+  },
+  "devDependencies": {
+    "browserify": "^7.0.3",
+    "reactify": "^0.17.1",
+    "uglifyify": "^2.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohangk/crappy-chat.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohangk/crappy-chat/issues"
+  },
+  "homepage": "https://github.com/mohangk/crappy-chat"
+}
