@@ -10,3 +10,6 @@ public/scripts/components
 
 # Leave out compiled bundles
 bundle.js
+
+# Test files
+tests/reports/
