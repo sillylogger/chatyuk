@@ -10,3 +10,7 @@ public/scripts/components
 
 # Leave out compiled bundles
 bundle.js
+
+# Ignore byproducts of test
+selenium-server-standalone*
+tests/reports/
