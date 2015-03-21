@@ -1,4 +1,12 @@
 module.exports = {
+  "Test Jasmine specs" : function (browser) {
+    browser
+      .url("http://chatyuk.com:8000/jasmine/SpecRunner.html")
+      .waitForElementVisible('body', 4000)
+      .assert.containsText('.alert .bar', '0 failures')
+      .end();
+  },
+
   "Test login page" : function (browser) {
     browser
       .url("http://chatyuk.com:8000/public/chat.html")
@@ -15,5 +23,6 @@ module.exports = {
       .assert.containsText('.chat-message', 'test message')
       .click('input[value=Logout]')
       .end();
-  }
+  },
+
 };

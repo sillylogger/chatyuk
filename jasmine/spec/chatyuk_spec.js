@@ -24,7 +24,7 @@ describe('Chatyuk',function() {
   });
 
   describe('defaultConfig', function() {
-    it('defaults display_mode to onpage', function() {
+    it('defaults display_mode to inpage', function() {
       expect(chatyuk.defaultConfig.display_mode).toEqual('inpage');
     });
   });

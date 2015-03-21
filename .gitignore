@@ -10,3 +10,6 @@ public/scripts/components
 
 # Leave out compiled bundles
 bundle.js
+
+# Ignore byproducts of test
+tests/reports/
