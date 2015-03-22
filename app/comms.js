@@ -1,6 +1,5 @@
 var Strophe = require('./deps/strophe.js');
-require('./deps/strophe.muc.js');
-var $ = require('./deps/jquery.min.js');
+              require('./deps/strophe.muc.js');
 
 module.exports =  {
 
@@ -58,25 +57,25 @@ module.exports =  {
     this.connection.muc.leave(this.roomAndServer(), this.username, function() { this.connection.disconnect() }.bind(this));
   },
 
-  log: function()
-  {
+  log: function() {
     console.log('IN CB', arguments)
     return true;
   },
 
   onMessage: function(message, room) {
+    console.log("IN comms::onMessage - this.onMesage");
 
-    console.log(">> IN comms::onMessage -this.onMesage");
-    var $message = $(message),
-        body = $message.children('body').text(),
-        jid = $message.attr('from'),
-        resource = Strophe.getResourceFromJid(jid),
-        sender = resource && Strophe.unescapeNode(resource) || '',
-        delayed = $message.find('delay').length > 0,
-        subject = $message.children('subject').text();
-    console.log(">> IN comms::onMessage calling this.onMessageCb", this.onMessageCb);
+    var messageBody = message.getElementsByTagName('body')[0];
+    var body = messageBody.innerHTML;
+
+    var jid = message.getAttribute('from');
+    var resource = Strophe.getResourceFromJid(jid);
+    var sender = resource && Strophe.unescapeNode(resource) || '';
+
     this.onMessageCb({ body: body, sender: sender });
+
     console.log('IN comms::onMessage - return');
+
     return true;
   },
 
